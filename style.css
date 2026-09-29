@@ -1,0 +1,79 @@
+﻿/* Custom styles and animations */
+
+.hero-bg {
+    background-image: url('assets/falegnameria.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* Fallback if image doesn't exist yet */
+.hero-bg:not([style*="background-image"]) {
+    background-image: url('https://images.unsplash.com/photo-1610505466028-1b2c554e2017?q=80&w=2070&auto=format&fit=crop');
+}
+
+.wood-bg {
+    background-image: linear-gradient(rgba(20, 15, 12, 0.85), rgba(20, 15, 12, 0.85)), url('assets/wood.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Fix for scroll offset due to sticky navbar */
+html {
+    scroll-padding-top: 6rem; 
+}
+
+/* Scroll reveal animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); filter: blur(4px);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+/* Small delays for staggered elements */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* Custom text selection color */
+::selection {
+    background-color: #2a221f;
+    color: #f9f8f6;
+}
+
+
+/* --- GLightbox Vertical Video Fixes (Plyr override) --- */
+.gvideo-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 90vh !important;
+    margin: 0 auto !important;
+}
+.plyr {
+    width: 100% !important;
+    height: 100% !important;
+    background: transparent !important;
+    border-radius: 8px;
+}
+.plyr__video-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+    padding-bottom: 0 !important; /* Removes Plyr forced 16:9 aspect ratio */
+    position: relative !important;
+}
+.plyr__video-wrapper video {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important; /* Forces native browser centering and fitting */
+    margin: auto !important;
+}

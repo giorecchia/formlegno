@@ -1,0 +1,486 @@
+﻿<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Legno - Designer su Misura</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Script for logic and Tailwind config -->
+    <script src="script.js"></script>
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-wood-100 antialiased bg-wood-900">
+
+    <!-- Header / Navbar -->
+    <nav class="fixed w-full z-50 bg-wood-900/90 backdrop-blur-md border-b border-wood-800 transition-all duration-300" id="main-nav">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <a href="#home" class="flex-shrink-0 flex items-center gap-4 group">
+                    <img src="assets/icona.png" alt="Icona Form Legno" class="h-12 w-auto transition-transform duration-500 group-hover:rotate-6 opacity-90">
+                    <span class="font-serif text-2xl font-semibold tracking-widest uppercase text-white">Form Legno</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="#home" class="text-wood-300 hover:text-white transition-colors text-sm uppercase tracking-widest">Home</a>
+                    <a href="#servizi" class="text-wood-300 hover:text-white transition-colors text-sm uppercase tracking-widest">Servizi</a>
+                    <a href="#presentazione" class="text-wood-300 hover:text-white transition-colors text-sm uppercase tracking-widest">Presentazione</a>
+                    <a href="#lavori" class="text-wood-300 hover:text-white transition-colors text-sm uppercase tracking-widest">Lavori</a>
+                    <a href="#contatti" class="border border-wood-300 px-6 py-2 hover:bg-white hover:text-wood-900 transition-all text-sm uppercase tracking-widest text-wood-300">Contatti</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-wood-100 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-wood-900 border-t border-wood-800 shadow-xl absolute w-full left-0 top-full">
+            <div class="px-6 py-8 space-y-6 flex flex-col items-center">
+                <a href="#home" class="text-wood-200 text-lg uppercase tracking-widest hover:text-white transition-colors">Home</a>
+                <a href="#servizi" class="text-wood-200 text-lg uppercase tracking-widest hover:text-white transition-colors">Servizi</a>
+                <a href="#presentazione" class="text-wood-200 text-lg uppercase tracking-widest hover:text-white transition-colors">Presentazione</a>
+                <a href="#lavori" class="text-wood-200 text-lg uppercase tracking-widest hover:text-white transition-colors">Lavori</a>
+                <a href="#contatti" class="text-wood-200 text-lg uppercase tracking-widest hover:text-white transition-colors">Contatti</a>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Hero Section / Presentazione -->
+         <section id="home" class="relative min-h-[100dvh] flex items-center pt-24 overflow-hidden">
+    <!-- Video di Sfondo -->
+    <video 
+        autoplay 
+        loop 
+        muted 
+        playsinline 
+        class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none"
+    >
+        <source src="assets/video_copertina.mp4" type="video/mp4">
+    </video>
+
+    <!-- Overlay scuro per leggere meglio il testo -->
+    <div class="absolute inset-0 bg-wood-900/60 z-10"></div>
+    
+    <!-- Contenuto della sezione -->
+    <div class="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col justify-end min-h-[80vh] pb-24">
+        <div class="max-w-4xl">
+            <p class="text-xs md:text-sm text-wood-300 font-mono tracking-[0.3em] mb-6 uppercase reveal-on-scroll">
+                 Form Legno &mdash; Dal 1989
+            </p>
+            <h1 class="text-5xl md:text-7xl lg:text-[7rem] font-serif text-white leading-[1.0] tracking-[-0.02em] uppercase mb-8 reveal-on-scroll delay-100">
+                design<br>su misura<br><span class="text-wood-400 italic font-light lowercase text-4xl md:text-6xl lg:text-[5.5rem] tracking-normal">per la tua casa</span>
+            </h1>
+            <div class="w-32 h-px bg-wood-500 mb-12 reveal-on-scroll delay-200"></div>
+        </div>
+    </div>
+</section>
+
+    <!--<section id="home" class="relative min-h-[100dvh] flex items-center pt-24 bg-[url('assets/video_copertina.mp4')] bg-cover bg-center bg-fixed">
+        <div class="absolute inset-0 bg-wood-900/60"></div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col justify-end min-h-[80vh] pb-24">
+            <div class="max-w-4xl">
+                <p class="text-xs md:text-sm text-wood-300 font-mono tracking-[0.3em] mb-6 uppercase reveal-on-scroll">
+                     Form Legno &mdash; Dal 1989
+                </p>
+                <h1 class="text-5xl md:text-7xl lg:text-[7rem] font-serif text-white leading-[1.0] tracking-[-0.02em] uppercase mb-8 reveal-on-scroll delay-100">
+                    Designer<br>su Misura<br><span class="text-wood-400 italic font-light lowercase text-4xl md:text-6xl lg:text-[5.5rem] tracking-normal">per la tua casa</span>
+                </h1>
+                <div class="w-32 h-px bg-wood-500 mb-12 reveal-on-scroll delay-200"></div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Servizi Section (Cosa Realizziamo) -->
+    <section id="servizi" class="py-32 bg-wood-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="mb-24 text-center reveal-on-scroll">
+                <h2 class="text-4xl md:text-6xl font-serif uppercase tracking-wider text-wood-900">Cosa Realizziamo</h2>
+                <div class="w-24 h-px bg-wood-500 mx-auto mt-8"></div>
+            </div>
+
+            <!-- Asymmetrical Grid for the 5 items -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 reveal-on-scroll">
+                
+                <!-- Porte -->
+                <div class="md:col-span-4 group relative overflow-hidden h-[400px]">
+                    <img src="assets/porte.jpg" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 grayscale hover:grayscale-0" alt="Porte">
+                    <div class="absolute inset-0 bg-gradient-to-t from-wood-900/90 via-transparent to-transparent flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-serif text-white uppercase tracking-widest text-center">Porte</h3>
+                    </div>
+                </div>
+
+                <!-- Arredi su Misura -->
+                <div class="md:col-span-4 group relative overflow-hidden h-[400px] md:mt-16">
+                    <img src="assets/arredi_su_misura.jpg" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 grayscale hover:grayscale-0" alt="Arredi su Misura">
+                    <div class="absolute inset-0 bg-gradient-to-t from-wood-900/90 via-transparent to-transparent flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-serif text-white uppercase tracking-widest text-center">Arredi su Misura</h3>
+                    </div>
+                </div>
+
+                <!-- Boiserie -->
+                <div class="md:col-span-4 group relative overflow-hidden h-[400px]">
+                    <img src="assets/IMG_20240527_162631.jpg" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 grayscale hover:grayscale-0" alt="Boiserie">
+                    <div class="absolute inset-0 bg-gradient-to-t from-wood-900/90 via-transparent to-transparent flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-serif text-white uppercase tracking-widest text-center">Boiserie</h3>
+                    </div>
+                </div>
+
+                <!-- Lavorazioni Speciali -->
+                <div class="md:col-span-6 group relative overflow-hidden h-[400px]">
+                    <img src="assets/speciali/129d1854-d663-4b8c-8c3a-464e5a2623f6.jpg" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 grayscale hover:grayscale-0" alt="Lavorazioni Speciali">
+                    <div class="absolute inset-0 bg-gradient-to-t from-wood-900/90 via-transparent to-transparent flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-serif text-white uppercase tracking-widest text-center">Lavorazioni Speciali</h3>
+                    </div>
+                </div>
+
+                <!-- Lavorazione in Legno -->
+                <div class="md:col-span-6 group relative overflow-hidden h-[400px] md:mt-16">
+                    <img src="assets/card5.jpg" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 grayscale hover:grayscale-0" alt="Lavorazione in Legno">
+                    <div class="absolute inset-0 bg-gradient-to-t from-wood-900/90 via-transparent to-transparent flex flex-col justify-end p-8">
+                        <h3 class="text-2xl font-serif text-white uppercase tracking-widest text-center">Lavorazione in Legno<br>di Ogni Genere</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodo Section -->
+    <section id="presentazione" class="py-32 bg-wood-600 border-y border-wood-700">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-24 reveal-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-serif uppercase tracking-wider mb-6 text-white">Il Nostro Metodo</h2>
+                <div class="w-24 h-px bg-wood-400 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <!-- Phase 1 -->
+                <div class="reveal-on-scroll group">
+                    <div class="text-wood-300 text-6xl mb-6 transition-transform group-hover:scale-110 duration-500">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <ul class="font-serif text-xl text-white space-y-2 mb-6 uppercase tracking-wider">
+                        <li>• Ascolto e Consulenza</li>
+                        <li>• Sopralluogo</li>
+                        <li>• Soluzione Progettuale</li>
+                    </ul>
+                    <div class="w-12 h-px bg-wood-400 mb-6 group-hover:w-full transition-all duration-700"></div>
+                    <p class="text-wood-100 font-light text-sm leading-relaxed text-justify">
+                        Ogni progetto parte dalla comprensione delle tue esigenze. Attraverso una attenta consulenza iniziale e un sopralluogo tecnico sul posto, rileviamo le misure esatte e valutiamo lo spazio disponibile. Sviluppiamo così una soluzione progettuale personalizzata, in grado di coniugare estetica e funzionalità!
+                    </p>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="reveal-on-scroll delay-100 group">
+                    <div class="text-wood-300 text-6xl mb-6 transition-transform group-hover:scale-110 duration-500">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <ul class="font-serif text-xl text-white space-y-2 mb-6 uppercase tracking-wider">
+                        <li>• Produzione Artigianale</li>
+                        <li>• Finiture e Controllo Finale</li>
+                    </ul>
+                    <div class="w-12 h-px bg-wood-400 mb-6 group-hover:w-full transition-all duration-700"></div>
+                    <p class="text-wood-100 font-light text-sm leading-relaxed text-justify">
+                        Realizziamo ogni pezzo nel nostro laboratorio curando ogni singolo dettaglio, dalla scelta delle finiture ai tocchi di pregio. Prima di ogni consegna, effettuiamo un controllo qualità per garantire la massima stabilità e resa estetica.
+                    </p>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="reveal-on-scroll delay-200 group">
+                    <div class="text-wood-300 text-6xl mb-6 transition-transform group-hover:scale-110 duration-500">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <ul class="font-serif text-xl text-white space-y-2 mb-6 uppercase tracking-wider">
+                        <li>• Trasporto e Consegna</li>
+                        <li>• Assistenza Post Vendita</li>
+                    </ul>
+                    <div class="w-12 h-px bg-wood-400 mb-6 group-hover:w-full transition-all duration-700"></div>
+                    <p class="text-wood-100 font-light text-sm leading-relaxed text-justify">
+                        Ci occupiamo personalmente della consegna e del montaggio per assicurare che ogni elemento si integri perfettamente negli spazi prescelti. Il nostro impegno non si ferma all'installazione: garantiamo un servizio di assistenza post-vendita continuo per qualsiasi futura esigenza o manutenzione.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Archivio Lavori Section -->
+    <section id="lavori" class="py-32 bg-wood-200">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="mb-24 text-center reveal-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-serif uppercase tracking-wider mb-6 text-wood-900">I Nostri Lavori</h2>
+                <div class="w-24 h-px bg-wood-500 mx-auto"></div>
+            </div>
+
+            <!-- Asymmetrical Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 reveal-on-scroll">
+                
+                <!-- Galleria -->
+                <a href="assets/galleria.jpg" class="md:col-span-5 group block relative h-[500px] overflow-hidden bg-black glightbox" data-gallery="gallery-Generale">
+                    <img src="assets/galleria.jpg" class="w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-all duration-1000 group-hover:scale-105" alt="Galleria Foto">
+                    <div class="absolute bottom-10 left-10 text-white">
+                        <p class="font-mono text-[10px] uppercase tracking-[0.2em] mb-3 text-wood-300">(Foto)</p>
+                        <h3 class="text-3xl font-serif uppercase tracking-widest">Galleria</h3>
+                    </div>
+                </a>
+
+                <!-- Video Galleria & Ambienti -->
+                <div class="md:col-span-7 grid grid-rows-2 gap-8">
+                    
+                    <!-- Video Galleria -->
+                    <a href="assets/Cucina/A3.mp4" class="group block relative h-[234px] overflow-hidden bg-black glightbox" data-gallery="gallery-Video">
+                        <img src="assets/IMG_20240527_162646.jpg" class="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-all duration-1000 group-hover:scale-105" alt="Video Galleria Cover">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 border border-white/50 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:border-white transition-colors">
+                                <i class="fa-solid fa-play text-white ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-8 left-8 text-white">
+                            <p class="font-mono text-[10px] uppercase tracking-[0.2em] mb-3 text-wood-300">(Video)</p>
+                            <h3 class="text-2xl font-serif uppercase tracking-widest">Video Galleria</h3>
+                        </div>
+                    </a>
+
+                    <!-- Ambienti -->
+                    <div class="bg-wood-300 p-10 flex flex-col justify-center h-[234px] group border border-wood-300 text-wood-900">
+                        <h3 class="text-2xl font-serif border-b border-wood-300 pb-4 mb-4 uppercase tracking-widest text-wood-900">Ambienti</h3>
+                        <div class="flex gap-6 text-sm font-light text-wood-700 flex-wrap uppercase tracking-wider">
+                            <span class="hover:text-wood-500 transition-colors cursor-pointer" onclick="document.getElementById('ambienti-grid').scrollIntoView({behavior: 'smooth'})">(Cucina)</span>
+                            <span class="hover:text-wood-500 transition-colors cursor-pointer" onclick="document.getElementById('ambienti-grid').scrollIntoView({behavior: 'smooth'})">(Zona Bagno)</span>
+                            <span class="hover:text-wood-500 transition-colors cursor-pointer" onclick="document.getElementById('ambienti-grid').scrollIntoView({behavior: 'smooth'})">(Zona Notte)</span>
+                            <span class="hover:text-wood-500 transition-colors cursor-pointer" onclick="document.getElementById('ambienti-grid').scrollIntoView({behavior: 'smooth'})">(Zona Living)</span>
+                        </div>
+                    </div>
+
+                </div>            </div>
+
+            <!-- Ambienti Photo Grid -->
+            <div id="ambienti-grid" class="grid grid-cols-1 md:grid-cols-12 gap-8 mt-16 reveal-on-scroll delay-100">
+                
+                <!-- Cucina -->
+                <a href="assets/Cucina/A1.jpg" class="group relative h-[450px] md:col-span-7 overflow-hidden block glightbox" data-gallery="gallery-Cucina">
+                    <img src="assets/Cucina/A1.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Cucina">
+                    <div class="absolute inset-0 bg-gradient-to-t from-wood-900/80 via-wood-900/20 to-transparent group-hover:from-wood-900/60 transition-colors"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <h4 class="text-white font-serif text-2xl uppercase tracking-widest">Cucina</h4>
+                    </div>
+                </a>
+
+                <!-- Zona Bagno -->
+                <a href="assets/Zona Bagno/1.jpg" class="group relative h-[450px] md:col-span-5 overflow-hidden block lg:mt-24 glightbox" data-gallery="gallery-ZonaBagno">
+                    <img src="assets/Zona Bagno/1.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Zona Bagno">
+                    <div class="absolute inset-0 bg-gradient-to-t from-wood-900/80 via-wood-900/20 to-transparent group-hover:from-wood-900/60 transition-colors"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <h4 class="text-white font-serif text-2xl uppercase tracking-widest">Zona Bagno</h4>
+                    </div>
+                </a>
+
+                <!-- Zona Notte -->
+                <a href="assets/zona notte/1.jpg" class="group relative h-[450px] md:col-span-5 overflow-hidden block glightbox" data-gallery="gallery-zonanotte">
+                    <img src="assets/zona notte/1.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Zona Notte">
+                    <div class="absolute inset-0 bg-gradient-to-t from-wood-900/80 via-wood-900/20 to-transparent group-hover:from-wood-900/60 transition-colors"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <h4 class="text-white font-serif text-2xl uppercase tracking-widest">Zona Notte</h4>
+                    </div>
+                </a>
+
+                <!-- Zona Living -->
+                <a href="assets/zona living design/IMG_0283.jpg" class="group relative h-[450px] md:col-span-7 overflow-hidden block lg:-mt-24 glightbox" data-gallery="gallery-zonalivingdesign">
+                    <img src="assets/zona living design/IMG_0283.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" alt="Zona Living">
+                    <div class="absolute inset-0 bg-gradient-to-t from-wood-900/80 via-wood-900/20 to-transparent group-hover:from-wood-900/60 transition-colors"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <h4 class="text-white font-serif text-2xl uppercase tracking-widest">Zona Living</h4>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contatti" class="wood-bg text-wood-300 pt-32 pb-12 border-t border-wood-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-24">
+                
+                <!-- Dove -->
+                <div>
+                    <h4 class="text-white font-serif text-xl mb-8 border-b border-wood-600/50 pb-4 uppercase tracking-widest">Dove Siamo</h4>
+                    <address class="not-italic font-light text-sm leading-relaxed text-wood-200">
+                        <span class="block text-white font-serif text-2xl mb-4 tracking-wider">Form Legno</span>
+                        Contrada Lamioni 1150/D<br>
+                        70043 Polignano a mare, Bari
+                    </address>
+                </div>
+
+                <!-- Orari -->
+                <div>
+                    <h4 class="text-white font-serif text-xl mb-8 border-b border-wood-600/50 pb-4 uppercase tracking-widest">Orari di Apertura</h4>
+                    <div class="font-light text-sm space-y-4 text-wood-200">
+                        <p class="text-white mb-2 uppercase tracking-widest text-xs">Da Lunedì a Venerdì</p>
+                        <div class="flex justify-between border-b border-wood-600/30 pb-2">
+                            <span>Mattina</span>
+                            <span>8:00 \ 13:00</span>
+                        </div>
+                        <div class="flex justify-between pt-1">
+                            <span>Pomeriggio</span>
+                            <span>15:00 \ 18:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contatti -->
+                <div>
+                    <h4 class="text-white font-serif text-xl mb-8 border-b border-wood-600/50 pb-4 uppercase tracking-widest">Contatti</h4>
+                    <ul class="font-light text-sm space-y-6 text-wood-200">
+                        <li>
+                            <a href="tel:3925298514" class="hover:text-white transition-colors flex items-center gap-4 group">
+                                <span class="w-10 h-10 border border-wood-500/50 rounded-full flex items-center justify-center group-hover:border-white transition-colors">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                                <div>
+                                    <span class="block text-xs uppercase tracking-widest mb-1 opacity-70">Tel (Giovanni)</span>
+                                    <span>+39 392 529 8514</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:formlegno.it@gmail.com" class="hover:text-white transition-colors flex items-center gap-4 group">
+                                <span class="w-10 h-10 border border-wood-500/50 rounded-full flex items-center justify-center group-hover:border-white transition-colors">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                <div>
+                                    <span class="block text-xs uppercase tracking-widest mb-1 opacity-70">E-mail</span>
+                                    <span>formlegno.it@gmail.com</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-wood-600/30 pt-8 flex flex-col md:flex-row justify-between items-center text-xs font-light tracking-wide text-wood-400">
+                <p>&copy; 2026 Form Legno. Tutti i diritti riservati.</p>
+                <div class="mt-4 md:mt-0 flex gap-6">
+                    <a href="javascript:void(0)" onclick="openLightbox(this)" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                    <a href="javascript:void(0)" onclick="openLightbox(this)" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- Inizio Gallerie -->
+<a href="assets/attivita commerciali/IMG_20230524_152653.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/attivita commerciali/IMG_20250321_122010.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/attivita commerciali/IMG_20250321_122018.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/attivita commerciali/VID_20230523_120139.mp4" class="glightbox hidden" data-gallery="gallery-Video"></a>
+<a href="assets/attivita commerciali/WhatsApp Image 2026-08-29 at 14.11.58.jpeg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/attivita commerciali/WhatsApp Image 2026-08-29 at 14.36.21 2.jpeg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/attivita commerciali/WhatsApp Image 2026-08-29 at 14.37.29.jpeg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Cucina/A2.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/A3.mp4" class="glightbox hidden" data-gallery="gallery-Video"></a>
+<a href="assets/Cucina/A4.mp4" class="glightbox hidden" data-gallery="gallery-Video"></a>
+<a href="assets/Cucina/A5.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/B1.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/B2.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/B3.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/B4.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/B5.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/C1.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/C2.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/C3.MOV" class="glightbox hidden" data-gallery="gallery-Video"></a>
+<a href="assets/Cucina/cucina esterna 1.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/cucina esterna 2.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/cucina esterna 3.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/D1.jpg" class="glightbox hidden" data-gallery="gallery-Cucina"></a>
+<a href="assets/Cucina/D2.mp4" class="glightbox hidden" data-gallery="gallery-Video"></a>
+<a href="assets/Porte/barn door 1.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Porte/barn door 2.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Porte/barn door 3.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Porte/barn door 4.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Porte/porta a scrigno 1.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Porte/porta a scrigno 2.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Porte/porte a scrigno.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Porte/portoncino.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Porte/portone 1.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Porte/portone 2.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Porte/sistema ergon (video).mp4" class="glightbox hidden" data-gallery="gallery-Video"></a>
+<a href="assets/Porte/sistema ergon 1.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Porte/sistema ergon 2.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/speciali/129d1854-d663-4b8c-8c3a-464e5a2623f6.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/speciali/77894926-a8e8-4e55-9d15-2cb315993d2f.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/speciali/Gemini_Generated_Image_7jmesf7jmesf7jme.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/speciali/IMG_0012.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/speciali/IMG_0013.MOV" class="glightbox hidden" data-gallery="gallery-Video"></a>
+<a href="assets/tavoli/IMG_0129.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/tavoli/IMG_0130.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/tavoli/IMG_20251128_105042168.jpg" class="glightbox hidden" data-gallery="gallery-Generale"></a>
+<a href="assets/Zona Bagno/2.jpg" class="glightbox hidden" data-gallery="gallery-ZonaBagno"></a>
+<a href="assets/Zona Bagno/3.jpg" class="glightbox hidden" data-gallery="gallery-ZonaBagno"></a>
+<a href="assets/Zona Bagno/4.jpg" class="glightbox hidden" data-gallery="gallery-ZonaBagno"></a>
+<a href="assets/Zona Bagno/5.jpg" class="glightbox hidden" data-gallery="gallery-ZonaBagno"></a>
+<a href="assets/Zona Bagno/6.jpeg" class="glightbox hidden" data-gallery="gallery-ZonaBagno"></a>
+<a href="assets/zona living design/51B4866F-9A54-4C9A-975A-223B927C1340.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/Gemini_Generated_Image_1gde3k1gde3k1gde.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/Gemini_Generated_Image_2920n02920n02920.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/Gemini_Generated_Image_4aayim4aayim4aay.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/Gemini_Generated_Image_dx6vi2dx6vi2dx6v.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_0220.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_0284.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_0285.MOV" class="glightbox hidden" data-gallery="gallery-Video"></a>
+<a href="assets/zona living design/IMG_0286.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20240502_151017.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20240503_095646.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20240515_155151.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20240515_155201.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20240527_162709.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20240527_162718.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20240606_161724.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20240904_151702.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20241010_160054.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20241203_142804.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20241203_142858.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20241216_103911.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20241216_103918.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20241216_103928.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20241217_124309.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20250120_091202.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20251120_143653169_HDR.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20260219_144812281_HDR.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/IMG_20260219_144858990.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/VID_20240527_162548.mp4" class="glightbox hidden" data-gallery="gallery-Video"></a>
+<a href="assets/zona living design/WhatsApp Image 2026-08-29 at 14.27.02.jpeg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living design/WhatsApp Image 2026-08-29 at 14.37.49.jpeg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living-design/Gemini_Generated_Image_dx6vi2dx6vi2dx6v.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona living-design/IMG_20241203_142858.jpg" class="glightbox hidden" data-gallery="gallery-zonalivingdesign"></a>
+<a href="assets/zona notte/10.jpg" class="glightbox hidden" data-gallery="gallery-zonanotte"></a>
+<a href="assets/zona notte/2.MOV" class="glightbox hidden" data-gallery="gallery-Video"></a>
+<a href="assets/zona notte/3.jpg" class="glightbox hidden" data-gallery="gallery-zonanotte"></a>
+<a href="assets/zona notte/4.jpg" class="glightbox hidden" data-gallery="gallery-zonanotte"></a>
+<a href="assets/zona notte/5.jpg" class="glightbox hidden" data-gallery="gallery-zonanotte"></a>
+<a href="assets/zona notte/7.jpg" class="glightbox hidden" data-gallery="gallery-zonanotte"></a>
+<a href="assets/zona notte/8.mp4" class="glightbox hidden" data-gallery="gallery-Video"></a>
+<a href="assets/zona notte/9.jpg" class="glightbox hidden" data-gallery="gallery-zonanotte"></a>
+<!-- Fine Gallerie -->
+
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script>const lightbox = GLightbox({touchNavigation: true, loop: true, autoplayVideos: true});</script>
+</body>
+</html>
+
+
+
+
+
+
