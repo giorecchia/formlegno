@@ -1,0 +1,5 @@
+.git
+.git/
+.agents/
+.cfignore
+skills-lock.json
