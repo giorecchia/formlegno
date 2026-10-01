@@ -77,3 +77,46 @@ html {
     object-fit: contain !important; /* Forces native browser centering and fitting */
     margin: auto !important;
 }
+.gvideo-wrapper video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    max-height: 100vh !important;
+}
+.gslide-media {
+    box-shadow: none !important;
+    background: transparent !important;
+}
+/* Rimuovi completamente gli sfondi neri di GLightbox */
+.gvideo-wrapper {
+    background: transparent !important;
+}
+.gslide-media.gslide-video {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+.plyr__video-wrapper {
+    background: transparent !important;
+}
+.plyr video {
+    background: transparent !important;
+}
+/* Se il video ha i controlli o no, assicuriamoci che non ci siano sfondi neri */
+.gvideo-wrapper video {
+    background: transparent !important;
+}
+/* Rimuovi sfondi neri strutturali GLightbox */
+.gslide-inner-content,
+.ginner-container,
+.gslide-media,
+.gslide-video,
+.gvideo-wrapper,
+.plyr,
+.plyr__video-wrapper,
+.plyr__video-wrapper video,
+.gvideo-wrapper video {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
