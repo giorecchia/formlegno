@@ -1,10 +1,10 @@
-// Customizing Tailwind theme
+﻿// Customizing Tailwind theme
 tailwind.config = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['"DM Sans"', 'sans-serif'],
-                serif: ['"Cormorant Garamond"', 'serif'],
+                sans: ['"Montserrat"', 'sans-serif'],
+                serif: ['"Syncopate"', 'sans-serif'],
             },
             colors: {
                 wood: {
