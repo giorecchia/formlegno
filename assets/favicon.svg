@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 30">
+  <style>
+    .cls-1 { fill: #1d1d1b; stroke-width: 0px; }
+    .cls-2 { fill: #8c5f3d; stroke-width: 0px; }
+  </style>
+  <g transform="translate(-102, -43)">
+    <g><rect class="cls-1" x="110.97" y="56.58" width="19.01" height="3.89" /><g><polygon class="cls-1" points="131.15 48.81 107.83 48.81 107.83 72.14 103.94 72.14 103.94 44.92 131.15 44.92 131.15 48.81" /><path class="cls-2" d="M137.01,44.93v27.2h-27.22v-3.89h23.33v-23.31h3.89Z" /></g><rect class="cls-1" x="117.81" y="52.54" width="5.33" height="1.21" /><rect class="cls-1" x="117.81" y="63.3" width="5.33" height="1.21" /></g>
+  </g>
+</svg>

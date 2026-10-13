@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -28,33 +28,33 @@
     <meta name="twitter:description" content="Dal 1989 realizziamo arredi su misura, porte e lavorazioni in legno. Artigianato di alta qualità per la tua casa.">
     <meta name="twitter:image" content="https://formlegno.com/assets/arredi_su_misura.jpg">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/icona.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/icona.png" sizes="any">
     <link rel="apple-touch-icon" href="assets/icona.png">
 </head>
 <body class="font-sans text-wood-100 antialiased bg-wood-900">
 
     <!-- Header / Navbar -->
-    <nav class="fixed w-full z-50 bg-wood-900/90 backdrop-blur-md border-b border-wood-800 transition-all duration-300" id="main-nav">
+    <nav class="fixed w-full z-50 bg-[#e3dcd5] border-b border-[#2B2D42]/10 transition-all duration-300" id="main-nav">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex justify-between items-center h-24">
                 <!-- Logo -->
                 <a href="#home" class="flex-shrink-0 flex items-center gap-4 group">
-                    <img src="assets/icona.png" alt="Icona Form Legno" class="h-12 w-auto transition-transform duration-500 group-hover:rotate-6 opacity-90">
-                    <span class="font-serif text-2xl font-semibold tracking-widest uppercase text-white">Form Legno</span>
+                    <img src="assets/logo_combined.svg" alt="Logo Form Legno" class="h-12 md:h-16 w-auto transition-transform duration-500 group-hover:rotate-3 opacity-90">
                 </a>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-10 items-center">
-                    <a href="#home" class="text-wood-300 hover:text-white transition-colors text-sm uppercase tracking-widest">Home</a>
-                    <a href="#servizi" class="text-wood-300 hover:text-white transition-colors text-sm uppercase tracking-widest">Servizi</a>
-                    <a href="#presentazione" class="text-wood-300 hover:text-white transition-colors text-sm uppercase tracking-widest">Presentazione</a>
-                    <a href="#lavori" class="text-wood-300 hover:text-white transition-colors text-sm uppercase tracking-widest">Lavori</a>
-                    <a href="#contatti" class="border border-wood-300 px-6 py-2 hover:bg-white hover:text-wood-900 transition-all text-sm uppercase tracking-widest text-wood-300">Contatti</a>
+                    <a href="#home" class="text-[#2B2D42] hover:text-white transition-colors text-sm uppercase tracking-widest">Home</a>
+                    <a href="#servizi" class="text-[#2B2D42] hover:text-white transition-colors text-sm uppercase tracking-widest">Servizi</a>
+                    <a href="#presentazione" class="text-[#2B2D42] hover:text-white transition-colors text-sm uppercase tracking-widest">Presentazione</a>
+                    <a href="#lavori" class="text-[#2B2D42] hover:text-white transition-colors text-sm uppercase tracking-widest">Lavori</a>
+                    <a href="#contatti" class="border border-[#2B2D42] px-6 py-2 hover:bg-[#2B2D42] hover:text-[#e3dcd5] transition-all text-sm uppercase tracking-widest text-[#2B2D42]">Contatti</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-wood-100 focus:outline-none p-2">
+                    <button id="mobile-menu-button" class="text-[#2B2D42] focus:outline-none p-2">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -62,13 +62,13 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-wood-900 border-t border-wood-800 shadow-xl absolute w-full left-0 top-full">
+        <div id="mobile-menu" class="hidden md:hidden bg-[#e3dcd5] border-t border-[#2B2D42]/10 shadow-xl absolute w-full left-0 top-full">
             <div class="px-6 py-8 space-y-6 flex flex-col items-center">
-                <a href="#home" class="text-wood-200 text-lg uppercase tracking-widest hover:text-white transition-colors">Home</a>
-                <a href="#servizi" class="text-wood-200 text-lg uppercase tracking-widest hover:text-white transition-colors">Servizi</a>
-                <a href="#presentazione" class="text-wood-200 text-lg uppercase tracking-widest hover:text-white transition-colors">Presentazione</a>
-                <a href="#lavori" class="text-wood-200 text-lg uppercase tracking-widest hover:text-white transition-colors">Lavori</a>
-                <a href="#contatti" class="text-wood-200 text-lg uppercase tracking-widest hover:text-white transition-colors">Contatti</a>
+                <a href="#home" class="text-[#2B2D42] text-lg uppercase tracking-widest hover:text-white transition-colors">Home</a>
+                <a href="#servizi" class="text-[#2B2D42] text-lg uppercase tracking-widest hover:text-white transition-colors">Servizi</a>
+                <a href="#presentazione" class="text-[#2B2D42] text-lg uppercase tracking-widest hover:text-white transition-colors">Presentazione</a>
+                <a href="#lavori" class="text-[#2B2D42] text-lg uppercase tracking-widest hover:text-white transition-colors">Lavori</a>
+                <a href="#contatti" class="text-[#2B2D42] text-lg uppercase tracking-widest hover:text-white transition-colors">Contatti</a>
             </div>
         </div>
     </nav>
@@ -388,10 +388,7 @@
             <!-- Copyright -->
             <div class="border-t border-[#2B2D42]/20 pt-8 flex flex-col md:flex-row justify-between items-center text-xs font-light tracking-wide text-[#2B2D42]/60">
                 <p>&copy; 2026 Form Legno. Tutti i diritti riservati.</p>
-                <div class="mt-4 md:mt-0 flex gap-6">
-                    <a href="javascript:void(0)" onclick="openLightbox(this)" class="hover:text-[#2B2D42] transition-colors"><i class="fa-brands fa-facebook-f text-lg"></i></a>
-                    <a href="javascript:void(0)" onclick="openLightbox(this)" class="hover:text-[#2B2D42] transition-colors"><i class="fa-brands fa-instagram text-lg"></i></a>
-                </div>
+                
             </div>
         </div>
     </footer>

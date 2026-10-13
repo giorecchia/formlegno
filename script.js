@@ -1,4 +1,4 @@
-﻿// Customizing Tailwind theme
+// Customizing Tailwind theme
 tailwind.config = {
     theme: {
         extend: {
@@ -54,8 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const nav = document.getElementById('main-nav');
         if (nav) {
             if (window.scrollY > 50) {
-                nav.classList.add('shadow-lg', 'bg-wood-900/95');
-                nav.classList.remove('bg-wood-900/0'); // If we wanted transparent start
+                nav.classList.add('shadow-lg');
             } else {
                 nav.classList.remove('shadow-lg');
             }
